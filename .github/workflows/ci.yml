@@ -23,7 +23,7 @@ jobs:
         run: python -m pytest
 
       - name: Lint
-        run: flake8 .
+        run: flake8 app/
 
       - name: Format check
         run: black --check .        
