@@ -17,7 +17,13 @@ jobs:
           python-version: 3.12
 
       - name: Install deps
-        run: pip install flask pytest
+        run: pip install flask pytest flake8 black
 
       - name: Run tests
         run: python -m pytest
+
+      - name: Lint
+        run: flake8 .
+
+      - name: Format check
+        run: black --check .        
